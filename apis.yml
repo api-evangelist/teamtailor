@@ -1,0 +1,61 @@
+aid: teamtailor
+name: Teamtailor
+description: >-
+  Teamtailor is an applicant tracking system (ATS) and employer branding
+  platform that helps companies attract, engage, and hire candidates with
+  customizable career sites, recruitment workflows, candidate communications,
+  and analytics. The platform supports collaborative hiring, GDPR compliance,
+  and a marketplace of integrations. Teamtailor's API follows the JSON:API
+  specification with regional base URLs and uses token-based authentication
+  with Public, Internal, and Admin key permission levels.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - ATS
+  - Applicant Tracking
+  - Recruiting
+  - HR
+  - Hiring
+  - Employer Branding
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/teamtailor/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: teamtailor:rest-api
+    name: Teamtailor API
+    description: >-
+      JSON:API compliant REST API for managing candidates, jobs, applications,
+      users, departments, and recruitment workflows in Teamtailor. Available
+      in EU (api.teamtailor.com), NA (api.na.teamtailor.com), and AU
+      (api.au.teamtailor.com) regional stacks. Authentication uses a token
+      in the Authorization header as "Authorization: Token token=<key>".
+    humanURL: https://docs.teamtailor.com/
+    baseURL: https://api.teamtailor.com
+    tags:
+      - Candidates
+      - Jobs
+      - Applications
+      - Users
+      - Departments
+    properties:
+      - type: Documentation
+        url: https://docs.teamtailor.com/
+      - type: Partner API
+        url: https://partner.teamtailor.com/partners/
+      - type: Support Article
+        url: https://support.teamtailor.com/en/articles/5963369-use-our-teamtailor-api
+
+common:
+  - type: Website
+    url: https://www.teamtailor.com
+  - type: Documentation
+    url: https://docs.teamtailor.com/
+  - type: Pricing
+    url: https://www.teamtailor.com/pricing/
+  - type: Sign Up
+    url: https://app.teamtailor.com/users/sign_up
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
