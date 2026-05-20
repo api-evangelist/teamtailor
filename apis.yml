@@ -48,6 +48,10 @@ apis:
         url: https://support.teamtailor.com/en/articles/5963369-use-our-teamtailor-api
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Teamtailor
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/teamtailor
   - type: Website
     url: https://www.teamtailor.com
   - type: Documentation
