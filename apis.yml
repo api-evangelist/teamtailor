@@ -48,6 +48,10 @@ apis:
         url: https://support.teamtailor.com/en/articles/5963369-use-our-teamtailor-api
 
 common:
+  - type: TrustCenter
+    url: security/teamtailor-trust-center.yml
+  - type: DomainSecurity
+    url: security/teamtailor-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/Teamtailor
   - type: LinkedIn
