@@ -46,6 +46,12 @@ apis:
     baseURL: https://api.teamtailor.com
     tags:
       - Candidates
+      - Job
+      - Application
+      - User
+      - Departments
+    tags_raw:
+      - Candidates
       - Jobs
       - Applications
       - Users
