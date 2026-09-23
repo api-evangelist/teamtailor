@@ -1,0 +1,29 @@
+# Front Door AI Index — teamtailor — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: teamtailor
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.teamtailor.com
+  final_host: www.teamtailor.com
+  ownership: own
+  owner: teamtailor
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 11
+  host_score: 11
+  density: 8.72
+  words: 1261
+  tiers:
+    agentic: 7
+    core: 4
+    model: 0
+  ambiguous: 2
+  top_terms:
+    copilot: 6
+    AI: 4
+    AI assistant: 1
+    automation: 1
+    smart: 1
