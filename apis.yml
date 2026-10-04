@@ -33,7 +33,6 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/teamtailor.png
 tags:
-  - ATS
   - Applicant Tracking
   - Recruiting
   - Human Resources
