@@ -9,6 +9,9 @@ checked:
 - https://fivetran.com/docs/connectors/partner-built-program
 - https://zapier.com/api/v4/apps/
 - slack/integrations/slack-integration-edges.yml
+- https://addons.mozilla.org/api/v5/addons/addon/<slug>/
+- https://addons.mozilla.org/api/v5/addons/search/?type=extension&app=firefox
+- https://chromewebstore.google.com/sitemap
 source:
 - adp/integrations/adp-integration-edges.yml
 - bamboohr/integrations/bamboohr-integration-edges.yml
@@ -72,6 +75,23 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A2NN9T8AX-teamtailor
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Teamtailor
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 - partner_name: Airbyte
   partner: airbyte
   partner_match: aggregator
@@ -128,20 +148,34 @@ edges:
     builder: Fivetran
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
-- partner_name: Slack (own)
-  partner: slack
-  partner_match: mirror
-  mirror_match: domain
+- partner_name: Mozilla Firefox Add-ons (AMO)
+  partner: null
+  partner_match: null
   type: marketplace
+  marketplace: firefox-add-ons
+  channel: partner-built
   relationship: platform-app
   direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://slack.com/marketplace/A2NN9T8AX-teamtailor
-  mirror_of: slack/integrations/slack-integration-edges.yml
-  apps:
-  - Teamtailor
+  evidence: https://addons.mozilla.org/en-US/firefox/addon/teamtailor-sourcing/
+  app: Teamtailor sourcing
   listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Slack app
+  category: browser extension (Firefox Add-ons)
+  partner_url: https://addons.mozilla.org/
+  contract_reference:
+    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
+    spec_file: null
+    role: firefox-add-on-publisher
+    registered_name: Teamtailor
+    register_id: https://addons.mozilla.org/api/v5/addons/addon/teamtailor-sourcing/
+    matched_domain: teamtailor.com
+    matched_by: domain
+    matched_name: Teamtailor
+    builder: publisher
+    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
+      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
+      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
+      to mirror.
+    detected_by: sweep-browser-extension-stores.py
+    detected: '2026-10-21'
+  detected_by: sweep-browser-extension-stores.py
+  first_seen: '2026-10-21'
